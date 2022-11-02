@@ -164,7 +164,7 @@ if user_menu == 'Athlete wise Analysis':
     selected_sport = st.selectbox('Select a Sport', sport_list)
     temp_df = helper.weight_v_height(df,selected_sport)
     fig,ax = plt.subplots()
-    ax = sns.scatterplot(x="Weight", y="Height", data = temp_df, hue="Medal",s=60)
+    ax = sns.scatterplot(x="Weight", y="Height", data = temp_df, hue="Medal",style = "Sex", s=100)
     st.pyplot(fig)
 
     st.title("Men Vs Women Participation Over the Years")
